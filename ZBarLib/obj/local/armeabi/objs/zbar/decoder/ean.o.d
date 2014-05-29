@@ -1,12 +1,9 @@
-obj/local/armeabi/objs/zbar/decoder.o: jni/decoder.c jni/config.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdlib.h \
+obj/local/armeabi/objs/zbar/decoder/ean.o: jni/decoder/ean.c jni/config.h \
+ jni/zbar.h jni/debug.h \
+ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdio.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/android/api-level.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/string.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/malloc.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/alloca.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/strings.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/types.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdint.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/_types.h \
@@ -20,9 +17,13 @@ obj/local/armeabi/objs/zbar/decoder.o: jni/decoder.c jni/config.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/linux/types.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/kernel.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
+ jni/decoder.h \
+ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdlib.h \
+ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/string.h \
+ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/malloc.h \
+ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/alloca.h \
+ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/strings.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/memory.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdio.h jni/zbar.h \
- jni/debug.h jni/decoder.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/limits.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/limits.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/linux/limits.h \
@@ -30,27 +31,23 @@ obj/local/armeabi/objs/zbar/decoder.o: jni/decoder.c jni/config.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/limits.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/syslimits.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/asm/page.h \
- jni/decoder/ean.h jni/decoder/i25.h jni/decoder/databar.h \
+ jni/debug.h jni/decoder/ean.h jni/decoder/i25.h jni/decoder/databar.h \
  jni/decoder/codabar.h jni/decoder/code39.h jni/decoder/code93.h \
  jni/decoder/code128.h jni/decoder/qr_finder.h jni/qrcode.h
 
 jni/config.h:
 
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdlib.h:
+jni/zbar.h:
+
+jni/debug.h:
+
+D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdio.h:
 
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/cdefs.h:
 
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h:
 
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/android/api-level.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/string.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/malloc.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/alloca.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/strings.h:
 
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/types.h:
 
@@ -78,15 +75,19 @@ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/kernel.h:
 
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h:
 
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/memory.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdio.h:
-
-jni/zbar.h:
-
-jni/debug.h:
-
 jni/decoder.h:
+
+D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdlib.h:
+
+D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/string.h:
+
+D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/malloc.h:
+
+D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/alloca.h:
+
+D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/strings.h:
+
+D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/memory.h:
 
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/limits.h:
 
@@ -101,6 +102,8 @@ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/limits.h:
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/syslimits.h:
 
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/asm/page.h:
+
+jni/debug.h:
 
 jni/decoder/ean.h:
 

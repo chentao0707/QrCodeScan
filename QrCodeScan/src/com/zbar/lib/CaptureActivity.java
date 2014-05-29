@@ -29,9 +29,9 @@ import com.zbar.lib.decode.InactivityTimer;
  * 作者: 陈涛(1076559197@qq.com)
  * 
  * 时间: 2014年5月9日 下午12:25:31
- *
+ * 
  * 版本: V_1.0.0
- *
+ * 
  * 描述: 扫描界面
  */
 public class CaptureActivity extends Activity implements Callback {
@@ -49,6 +49,15 @@ public class CaptureActivity extends Activity implements Callback {
 	private int cropHeight = 0;
 	private RelativeLayout mContainer = null;
 	private RelativeLayout mCropLayout = null;
+	private boolean isNeedCapture = false;
+	
+	public boolean isNeedCapture() {
+		return isNeedCapture;
+	}
+
+	public void setNeedCapture(boolean isNeedCapture) {
+		this.isNeedCapture = isNeedCapture;
+	}
 
 	public int getX() {
 		return x;
@@ -164,7 +173,7 @@ public class CaptureActivity extends Activity implements Callback {
 		Toast.makeText(getApplicationContext(), result, Toast.LENGTH_SHORT).show();
 
 		// 连续扫描，不发送此消息扫描一次结束后就不能再次扫描
-		handler.sendEmptyMessage(R.id.restart_preview);
+		// handler.sendEmptyMessage(R.id.restart_preview);
 	}
 
 	private void initCamera(SurfaceHolder surfaceHolder) {
@@ -185,6 +194,9 @@ public class CaptureActivity extends Activity implements Callback {
 			setY(y);
 			setCropWidth(cropWidth);
 			setCropHeight(cropHeight);
+			// 设置是否需要截图
+			setNeedCapture(true);
+			
 
 		} catch (IOException ioe) {
 			return;
@@ -214,7 +226,7 @@ public class CaptureActivity extends Activity implements Callback {
 		hasSurface = false;
 
 	}
-	
+
 	public Handler getHandler() {
 		return handler;
 	}

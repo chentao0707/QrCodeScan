@@ -35,7 +35,10 @@ obj/local/armeabi/objs/zbar/qrcode/qrdectxt.o: jni/qrcode/qrdectxt.c \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/limits.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/syslimits.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/asm/page.h \
- jni/debug.h jni/decoder/qr_finder.h jni/error.h jni/img_scanner.h
+ jni/debug.h jni/decoder/ean.h jni/decoder/i25.h jni/decoder/databar.h \
+ jni/decoder/codabar.h jni/decoder/code39.h jni/decoder/code93.h \
+ jni/decoder/code128.h jni/decoder/qr_finder.h jni/error.h \
+ jni/img_scanner.h
 
 jni/config.h:
 
@@ -124,6 +127,20 @@ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/syslimits.h:
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/asm/page.h:
 
 jni/debug.h:
+
+jni/decoder/ean.h:
+
+jni/decoder/i25.h:
+
+jni/decoder/databar.h:
+
+jni/decoder/codabar.h:
+
+jni/decoder/code39.h:
+
+jni/decoder/code93.h:
+
+jni/decoder/code128.h:
 
 jni/decoder/qr_finder.h:
 

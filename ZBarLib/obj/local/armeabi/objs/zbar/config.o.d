@@ -1,4 +1,4 @@
-obj/local/armeabi/objs/zbar/decoder.o: jni/decoder.c jni/config.h \
+obj/local/armeabi/objs/zbar/config.o: jni/config.c jni/config.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdlib.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/cdefs.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/cdefs_elf.h \
@@ -20,19 +20,7 @@ obj/local/armeabi/objs/zbar/decoder.o: jni/decoder.c jni/config.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/linux/types.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/kernel.h \
  D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/memory.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdio.h jni/zbar.h \
- jni/debug.h jni/decoder.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/limits.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/limits.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/linux/limits.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/internal_types.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/limits.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/syslimits.h \
- D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/asm/page.h \
- jni/decoder/ean.h jni/decoder/i25.h jni/decoder/databar.h \
- jni/decoder/codabar.h jni/decoder/code39.h jni/decoder/code93.h \
- jni/decoder/code128.h jni/decoder/qr_finder.h jni/qrcode.h
+ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/memory.h jni/zbar.h
 
 jni/config.h:
 
@@ -80,42 +68,4 @@ D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/sysmacros.h:
 
 D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/memory.h:
 
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/stdio.h:
-
 jni/zbar.h:
-
-jni/debug.h:
-
-jni/decoder.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/limits.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/limits.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/linux/limits.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/internal_types.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/machine/limits.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/sys/syslimits.h:
-
-D:/NDK-r9d/platforms/android-19/arch-arm/usr/include/asm/page.h:
-
-jni/decoder/ean.h:
-
-jni/decoder/i25.h:
-
-jni/decoder/databar.h:
-
-jni/decoder/codabar.h:
-
-jni/decoder/code39.h:
-
-jni/decoder/code93.h:
-
-jni/decoder/code128.h:
-
-jni/decoder/qr_finder.h:
-
-jni/qrcode.h:

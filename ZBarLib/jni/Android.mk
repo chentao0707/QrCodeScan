@@ -34,6 +34,15 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE    := zbar
 
+MY_SOURCES_LIST := $(wildcard $(LOCAL_PATH)/*.c)
+MY_SOURCES_LIST += $(wildcard $(LOCAL_PATH)/decoder/*.c)
+MY_SOURCES_LIST += $(wildcard $(LOCAL_PATH)/libiconv/*.c)
+MY_SOURCES_LIST += $(wildcard $(LOCAL_PATH)/processor/*.c)
+MY_SOURCES_LIST += $(wildcard $(LOCAL_PATH)/qrcode/*.c)
+MY_SOURCES_LIST += $(wildcard $(LOCAL_PATH)/video/*.c)
+MY_SOURCES_LIST += $(wildcard $(LOCAL_PATH)/window/*.c)
+
+#LOCAL_SRC_FILES := $(MY_SOURCES_LIST:$(LOCAL_PATH)/%=%)
 LOCAL_SRC_FILES := convert.c decoder.c error.c image.c img_scanner.c \
 	refcnt.c scanner.c symbol.c video.c window.c \
 	\
@@ -41,6 +50,10 @@ LOCAL_SRC_FILES := convert.c decoder.c error.c image.c img_scanner.c \
 	qrcode/rs.c qrcode/util.c \
 	\
 	processor/null.c video/null.c window/null.c decoder/qr_finder.c \
+	\
+	decoder/code128.c decoder/code39.c decoder/code93.c decoder/codabar.c \
+	\
+	decoder/ean.c decoder/databar.c decoder/i25.c \
 	android_zbar.c
 	
 LOCAL_CFLAGS := -I$(LOCAL_PATH) -I$(LOCAL_PATH)/$(LIBICONV)
