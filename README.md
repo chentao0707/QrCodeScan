@@ -1,14 +1,16 @@
-More Important:
+# More Important:
 
-该项目已经有了升级版本：
+##该项目已经有了升级版本：
 
-1. ZBar的编译项目新地址： https://github.com/SkillCollege/ZBarBuilderPorj.git
-2. ZBar的示例项目新地址： https://github.com/SkillCollege/ZBarScanPorj.git
-3. ZXing3.1.0版本项目地址： https://github.com/SkillCollege/ZXingProj.git
+>* ZBar的编译项目新地址： https://github.com/SkillCollege/ZBarBuilderPorj.git
+>* ZBar的示例项目新地址： https://github.com/SkillCollege/ZBarScanPorj.git
+>* ZXing3.1.0版本项目地址： https://github.com/SkillCollege/ZXingProj.git
 
 如果使用ZBar解码并且使用ZXing3.1.0扫描，只需要修改ZXingProj中的DecodeHandler解码模块，将ZXing的解码换成ZBar即可
 
 如：
+
+```Java
 
 private void decode(byte[] data, int width, int height) {
 		Size size = activity.getCameraManager().getPreviewSize();
@@ -53,6 +55,8 @@ private void decode(byte[] data, int width, int height) {
 			}
 		}
 	}
+	
+```
 
 QrCodeScan
 ==========
