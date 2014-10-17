@@ -1,3 +1,59 @@
+More Important:
+
+该项目已经有了升级版本：
+
+1. ZBar的编译项目新地址： https://github.com/SkillCollege/ZBarBuilderPorj.git
+2. ZBar的示例项目新地址： https://github.com/SkillCollege/ZBarScanPorj.git
+3. ZXing3.1.0版本项目地址： https://github.com/SkillCollege/ZXingProj.git
+
+如果使用ZBar解码并且使用ZXing3.1.0扫描，只需要修改ZXingProj中的DecodeHandler解码模块，将ZXing的解码换成ZBar即可
+
+如：
+
+private void decode(byte[] data, int width, int height) {
+		Size size = activity.getCameraManager().getPreviewSize();
+
+		// 这里需要将获取的data翻转一下，因为相机默认拿的的横屏的数据
+		byte[] rotatedData = new byte[data.length];
+		for (int y = 0; y < size.height; y++) {
+			for (int x = 0; x < size.width; x++)
+				rotatedData[x * size.height + size.height - y - 1] = data[x + y * size.width];
+		}
+
+		// 宽高也要调整
+		int tmp = size.width;
+		size.width = size.height;
+		size.height = tmp;
+
+		Rect rect = activity.getCropRect();
+
+		ZBarDecoder zBarDecoder = new ZBarDecoder();
+		String result = zBarDecoder.decodeCrop(rotatedData, size.width, size.height, rect.left, rect.top, rect.width(), rect.height());
+
+		if (result != null) {
+			if (null != activity.getHandler()) {
+				Message msg = new Message();
+				msg.obj = result;
+				msg.what = R.id.decode_succeeded;
+				activity.getHandler().sendMessage(msg);
+			}
+			// Message message = Message.obtain(activity.getHandler(),
+			// R.id.decode_succeeded, result);
+			// if (null != message) {
+			// message.sendToTarget();
+			// }
+		} else {
+			// Message message = Message.obtain(activity.getHandler(),
+			// R.id.decode_failed);
+			// if (null != message) {
+			// message.sendToTarget();
+			// }
+			if (null != activity.getHandler()) {
+				activity.getHandler().sendEmptyMessage(R.id.decode_failed);
+			}
+		}
+	}
+
 QrCodeScan
 ==========
 
@@ -53,3 +109,4 @@ QrCodeScan
     注意：如果是想要在自己的项目中直接使用项目提供的ZbarManager源码。需要保持包名一致（com.zbar.lib）
 
 感谢@Houny提供的Android Studio下运行异常解决方法。
+
